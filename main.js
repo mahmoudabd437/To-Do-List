@@ -14,9 +14,7 @@ if (localStorage.getItem('task') !== null) {
 function addTasks() {
     let taskValue = '';
     for (let i = 0; i < arrTasks.length; i++) {
-        taskValue += `<p class="task" onclick="doneTask(${i})">${arrTasks[i]}
-            <span class="delete"
-                    onclick="deleteTask(${i})">delete</span></p>`;
+        taskValue += `<div class="allTask"><p class="task" onclick="doneTask(${i})">${arrTasks[i]}</p><span class="delete"onclick="deleteTask(${i})">delete</span></div>`;
     }
     divTasks.innerHTML = taskValue;
 }
